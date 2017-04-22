@@ -5,13 +5,14 @@ public class FindNthFromLastNode {
 	public static void main(String[] args) {
 		String data[] = {"ramdas","nana","sawant","kartik","amita","gunjal"};
 		Node head = Node.createLinkedListFromArray(data);
-//		printList(head);
-//		printList(reverseList(head));		
+		printList(head);
+		printList(reverseList(head));	
+//		System.out.println(findNthFromLast(head, 3));
 //		printList(moveLastToFront(head));
 		
 //		addLast(head, "last");
 		insertInPosition(head, "Abby", 2);
-		printList(head);
+//		printList(head);
 	}
 	
 	
@@ -84,7 +85,6 @@ public class FindNthFromLastNode {
 		return last;
 	}
 	public static void addLast(Node head, String data){
-		Node prev = null;
 		Node ptr = head;
 		while(ptr.nextNode !=null){
 			ptr = ptr.nextNode;
@@ -94,16 +94,5 @@ public class FindNthFromLastNode {
 		ptr.nextNode = newTail;
 	}
 	
-//	public static Node moveLastToFront(Node head){
-//		Node ptr = head;
-//		while(ptr.nextNode!=null && ptr.nextNode.nextNode!=null){
-//			ptr = ptr.nextNode;
-//		}
-//		//now ptr points to amita
-//		Node newHead = new Node();
-//		newHead.data = ptr.nextNode.data;
-//		ptr.nextNode = null;
-//		newHead.nextNode = head;		
-//		return newHead;
-//	}
+
 }
